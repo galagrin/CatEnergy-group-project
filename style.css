@@ -1,0 +1,71 @@
+/* oswald-regular - основной шрифт */
+@font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/oswald-v53-latin-regular.woff2') format('woff2'); 
+}
+/* Arial, sans-serif - второй шрифт -он есть в VS Code */
+
+*{
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+html {
+    box-sizing: border-box;
+}  
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 100%;
+    color: #000;
+}
+
+/* Хедер начало*/
+
+/* Хедер конец */
+
+/* Секция BANNER начало */
+
+/* Секция BANNER конец */
+
+/* Секция WEIGHT начало */
+
+/* Секция WEIGHT конец */
+
+/* Секция FUNCTIONALITY начало */
+
+/* Секция FUNCTIONALITY конец */
+
+/* Секция EXAMPLE начало */
+
+/* Секция EXAMPLE конец */
+
+/* Секция MAP начало */
+
+/* Секция MAP конец */
+
+/* FOOTER начало */
+
+/* FOOTER конец */
+
+
+/* Медиа запросы */
+/* Первый медиа запрос -планшет */
+@media (max-width: 768px) {
+
+}
+/* Второй медиа запрпос - мобильный*/
+@media (max-width: 320px) {
+
+}
