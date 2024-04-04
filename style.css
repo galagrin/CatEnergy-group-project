@@ -41,36 +41,39 @@ body {
 }
 
 .header{
+    /* position: fixed; */
     justify-content: space-between;
-    padding-left: 110px;
-    /* padding-top: 50px; */
+    padding-left: 7%;
     padding-top: 3.3%;
     width: 100%;
-    height: 17vh;
+    height: 30%;
 }
 
 .header__logo{
     align-items: flex-end;
     padding-top: 1.5%;
-    /* width: 202px; */
-    /* height: 59px; */
     width: 20%;
     height: 100%;
 }
 
-.menu{
+.header__menu{ 
     align-items: flex-end;
     flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    width: 50%;
+}
+
+.menu{ 
     list-style-type: none;
     justify-content: space-evenly;
     flex-wrap: nowrap;
-    width: 41vw;
+    width: 100%;
 }
 
 .menu__link{
     text-decoration: none;
     color: white;
-    /* font-size: 20px; */
     font-size: 1.2rem;
 }
 
@@ -88,7 +91,8 @@ body {
     align-items: flex-start;
     justify-content: space-around;
     width: 100%;
-    height: 80vh;
+    height: 70%;
+    /* max-height: 696px; если оставить, то при увеличении экрана элементы банера вылезают на другие блоки */
 }
 
 .banner__content{
@@ -97,11 +101,11 @@ body {
     text-align: left;
     font-size: smaller;
     line-height: 1;
-    padding-left: 9%;
+    padding-left: 10%;
     padding-top: 5%;
     margin-right: 0%;
-    max-width: 45%;
-    max-height: 80%;
+    width: 37%;
+    height: 60%;
 }
 
 .banner__title{
@@ -110,14 +114,16 @@ body {
     font-size: 40px;
     line-height: 1.4;
     color: #000;
+    max-width: 100%;
 }
 
 .banner__text{
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.5rem;
     line-height: 100%;
     text-transform: uppercase;
     color: #000;
+    max-width: 100%;
 }
 
 .button{
@@ -125,17 +131,17 @@ body {
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-between;
-    width: 220px;
-    height: 54px;
+    width: 50%;
+    height: 15%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-top: 13%;
     background-color: #68b738;
-    margin-top: 50px;
 }
 
 .button__text{ 
     margin: 0%;
-    padding-top: 14px;
     font-weight: 400;
-    /* font-size: 20px; */
     font-size: 1.2rem;
     width: 100%;
     height: 100%;
@@ -143,12 +149,17 @@ body {
     color: #fff;
 }
 
-.banner__image{
+.banner__container{
+    width: 60%;
+    padding-right: 23%;
     padding-top: 2%;
-    /* padding-bottom: 5%; */
-    padding-right: 20%;
+}
+
+.banner__image{
+    padding-left: 0%;
     margin-left: 0%;
-    max-height: 100%;
+    width: 100%;
+    max-width: 100%;
 }
 
 .header,
@@ -156,8 +167,10 @@ body {
     background-image: url(/assets/images/background-desktop.png);
     background-repeat: no-repeat;
     background-position: right;
-    background-size: auto;
+    background-size: 50%;
     background-attachment: fixed;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 /* Секция BANNER конец */
