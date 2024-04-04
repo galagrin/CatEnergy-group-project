@@ -3,7 +3,7 @@
     font-family: 'Oswald';
     font-style: normal;
     font-weight: 400;
-    src: url('./assets/fonts/oswald-v53-latin-regular.woff2') format('woff2'); 
+    src: url('./assets/fonts/Oswald-Regular.ttf') format('truetype'); 
 }
 /* Arial, sans-serif - второй шрифт -он есть в VS Code */
 
@@ -32,10 +32,133 @@ body {
 }
 
 /* Хедер начало*/
+.header,
+.header__menu,
+.menu,
+.banner
+.banner__content{
+    display: flex;
+}
+
+.header{
+    justify-content: space-between;
+    padding-left: 110px;
+    /* padding-top: 50px; */
+    padding-top: 3.3%;
+    width: 100%;
+    height: 17vh;
+}
+
+.header__logo{
+    align-items: flex-end;
+    padding-top: 1.5%;
+    /* width: 202px; */
+    /* height: 59px; */
+    width: 20%;
+    height: 100%;
+}
+
+.menu{
+    align-items: flex-end;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    width: 41vw;
+}
+
+.menu__link{
+    text-decoration: none;
+    color: white;
+    /* font-size: 20px; */
+    font-size: 1.2rem;
+}
+
+.menu__link:hover{
+    text-decoration: underline;
+}
 
 /* Хедер конец */
 
 /* Секция BANNER начало */
+
+.banner{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+    height: 80vh;
+}
+
+.banner__content{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: smaller;
+    line-height: 1;
+    padding-left: 9%;
+    padding-top: 5%;
+    margin-right: 0%;
+    max-width: 45%;
+    max-height: 80%;
+}
+
+.banner__title{
+    font-style: normal;
+    font-family:'Oswald';
+    font-size: 40px;
+    line-height: 1.4;
+    color: #000;
+}
+
+.banner__text{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.button{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 220px;
+    height: 54px;
+    background-color: #68b738;
+    margin-top: 50px;
+}
+
+.button__text{ 
+    margin: 0%;
+    padding-top: 14px;
+    font-weight: 400;
+    /* font-size: 20px; */
+    font-size: 1.2rem;
+    width: 100%;
+    height: 100%;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.banner__image{
+    padding-top: 2%;
+    /* padding-bottom: 5%; */
+    padding-right: 20%;
+    margin-left: 0%;
+    max-height: 100%;
+}
+
+.header,
+.banner {
+    background-image: url(/assets/images/background-desktop.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: auto;
+    background-attachment: fixed;
+}
 
 /* Секция BANNER конец */
 
