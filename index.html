@@ -6,6 +6,62 @@
     <link rel="stylesheet" href="./normalize.css">
     <link rel="stylesheet" href="./style.css">
     <title>Cat energy</title>
+
+    <!-- Скрипт для кошек Было/Стало -->
+    <script>
+        function initComparisons() {
+        var x, i;
+        x = document.getElementsByClassName("img-comp-overlay");
+        for (i = 0; i < x.length; i++) {
+        compareImages(x[i]);
+        }
+        function compareImages(img) {
+        var slider, img, clicked = 0, w, h;
+            w = img.offsetWidth;
+            h = img.offsetHeight;
+            img.style.width = (w / 2) + "px";
+            slider = document.createElement("DIV");
+            slider.setAttribute("class", "img-comp-slider");
+            img.parentElement.insertBefore(slider, img);
+            slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+            slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+            slider.addEventListener("mousedown", slideReady);
+            window.addEventListener("mouseup", slideFinish);
+            slider.addEventListener("touchstart", slideReady);
+            window.addEventListener("touchstop", slideFinish);
+            function slideReady(e) {
+            e.preventDefault();
+            clicked = 1;
+            window.addEventListener("mousemove", slideMove);
+            window.addEventListener("touchmove", slideMove);
+            }
+            function slideFinish() {
+            clicked = 0;
+            }
+            function slideMove(e) {
+            var pos;
+            if (clicked == 0) return false;
+            pos = getCursorPos(e)
+            if (pos < 0) pos = 0;
+            if (pos > w) pos = w;
+            slide(pos);
+            }
+            function getCursorPos(e) {
+            var a, x = 0;
+            e = e || window.event;
+            a = img.getBoundingClientRect();
+            x = e.pageX - a.left;
+            x = x - window.pageXOffset;
+            return x;
+            }
+            function slide(x) {
+            img.style.width = x + "px";
+            slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+            }
+        }
+        }
+        </script>
+<!-- Скрипт для кошек Было/Стало  Конец-->
 </head>
 <body>
     <header class="header">
@@ -35,11 +91,72 @@
         <!-- Начало секции Живой пример -->
         <section class="example">
 
+            <div class="example_wrapper">
+                <h2 class="example__heading">Живой пример</h2>
+                <div class="example__desc">
+                <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой 
+                    обычный корм на Cat Energy Slim. Отличный результат 
+                    без изнуряющих тренировок! При этом он не менял своих 
+                    привычек и по-прежнему спит по 16 часов в день. 
+                </p>
+            </div>
+
+                <div class="example__price">
+                    <div class="example__weight">
+                        <h3>5 кг</h3>
+                        <p>снижение веса</p>
+                    </div>
+                    <div class="example__duration">
+                        <h3>60 дней</h3>
+                        <p>затрачено времени</p>
+                    </div>
+                    <h3 class="example__cost">затраты на питание:</h3>
+                    <h3 class="example__cost">15 000 руб.</h3>
+                    </div>
+            </div>
+
+            <!-- контейнер с кошкой -->
+            <div class="example__beforeafter">
+                <div class="img-comp-container">
+                    <div class="img-comp-img">
+                        <img src="./assets/images/before-cat.png"  height="300" width="400" alt="толстый кот">
+                    </div>
+                    <div class="img-comp-img img-comp-overlay">
+                        <img src="./assets/images/after-cat.png"  height="300" width="400" alt="худой кот">
+                    </div>
+                </div>
+                <input type="range" min="0" max="2" class="exemple__slider">
+                <div class="example__range">
+                    <p>было</p>
+                    <p>стало</p>
+                </div>
+                
+
+            </div>
+
         </section>
         <!-- Конец секции Живой пример -->
-
+        
         <!-- Начало секции Карта -->
         <section class="map">
+            <div class="map__wrapper">
+                <div class="map__invitation">
+                    <h2 class="map__invitation-heading">приглашаем 
+                        к сотрудничеству 
+                        дилеров!</h2>
+                        <div class="map__invitation-textwrapper">
+                            <p class="map__invitation-text">
+                            ул. Большая Конюшенная, д. 19/8
+                            </p>
+                            <p class="map__invitation-text">
+                            Санкт-Петербург
+                            </p>
+                        </div>
+                </div>
+            </div>
+            <div class="map__container">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad3ee1ad01b4114d0637482a8ff4ed2bc47a91e2bd63f3bb04278198601d2e2ec&amp;source=constructor"  height="444"></iframe>
+            </div>
 
         </section>
         <!-- Конец секции Карта -->
@@ -48,5 +165,10 @@
     <footer class="footer">
 
     </footer>
+<!-- Скрипт для кошек -->
+    <script>
+        initComparisons();
+    </script>
+<!-- Скрипт для кошек -->
 </body>
 </html>
