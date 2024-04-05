@@ -349,7 +349,31 @@ iframe{
 /* Секция MAP конец */
 
 /* FOOTER начало */
+.footer,
+.footer__content,
+.footer__sm{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
+.footer{
+    height: 17vh;
+    justify-content: center;
+    background-color: #F2F2F2;
+}
+
+.footer__content{
+    width: 90%;
+    height: 70%;
+    justify-content: space-between;
+}
+
+.footer__sm{
+    width: 10%;
+    height: 90%;
+    justify-content: space-between;
+}
 /* FOOTER конец */
 
 
