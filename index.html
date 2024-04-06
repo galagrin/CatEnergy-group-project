@@ -1,210 +1,339 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./normalize.css">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Cat energy</title>
 
     <!-- Скрипт для кошек Было/Стало -->
     <script>
-        function initComparisons() {
+      function initComparisons() {
         var x, i;
         x = document.getElementsByClassName("img-comp-overlay");
         for (i = 0; i < x.length; i++) {
-        compareImages(x[i]);
+          compareImages(x[i]);
         }
         function compareImages(img) {
-        var slider, img, clicked = 0, w, h;
-            w = img.offsetWidth;
-            h = img.offsetHeight;
-            img.style.width = (w / 2) + "px";
-            slider = document.createElement("DIV");
-            slider.setAttribute("class", "img-comp-slider");
-            img.parentElement.insertBefore(slider, img);
-            slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
-            slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
-            slider.addEventListener("mousedown", slideReady);
-            window.addEventListener("mouseup", slideFinish);
-            slider.addEventListener("touchstart", slideReady);
-            window.addEventListener("touchstop", slideFinish);
-            function slideReady(e) {
+          var slider,
+            img,
+            clicked = 0,
+            w,
+            h;
+          w = img.offsetWidth;
+          h = img.offsetHeight;
+          img.style.width = w / 2 + "px";
+          slider = document.createElement("DIV");
+          slider.setAttribute("class", "img-comp-slider");
+          img.parentElement.insertBefore(slider, img);
+          slider.style.top = h / 2 - slider.offsetHeight / 2 + "px";
+          slider.style.left = w / 2 - slider.offsetWidth / 2 + "px";
+          slider.addEventListener("mousedown", slideReady);
+          window.addEventListener("mouseup", slideFinish);
+          slider.addEventListener("touchstart", slideReady);
+          window.addEventListener("touchstop", slideFinish);
+          function slideReady(e) {
             e.preventDefault();
             clicked = 1;
             window.addEventListener("mousemove", slideMove);
             window.addEventListener("touchmove", slideMove);
-            }
-            function slideFinish() {
+          }
+          function slideFinish() {
             clicked = 0;
-            }
-            function slideMove(e) {
+          }
+          function slideMove(e) {
             var pos;
             if (clicked == 0) return false;
-            pos = getCursorPos(e)
+            pos = getCursorPos(e);
             if (pos < 0) pos = 0;
             if (pos > w) pos = w;
             slide(pos);
-            }
-            function getCursorPos(e) {
-            var a, x = 0;
+          }
+          function getCursorPos(e) {
+            var a,
+              x = 0;
             e = e || window.event;
             a = img.getBoundingClientRect();
             x = e.pageX - a.left;
             x = x - window.pageXOffset;
             return x;
-            }
-            function slide(x) {
+          }
+          function slide(x) {
             img.style.width = x + "px";
-            slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
-            }
+            slider.style.left = img.offsetWidth - slider.offsetWidth / 2 + "px";
+          }
         }
-        }
-        </script>
-<!-- Скрипт для кошек Было/Стало  Конец-->
-</head>
-<body>
+      }
+    </script>
+    <!-- Скрипт для кошек Было/Стало  Конец-->
+  </head>
+
+  <body>
     <header class="header">
-        <div class="header__logo">
-            <img src="/assets/images/logo-desktop.svg" alt="logo">
-        </div>
-        <div class="header__menu">
-            <ul class="menu">
-                <li>
-                    <a href="#" class="menu__link">ГЛАВНАЯ</a>
-                </li>
-                <li>
-                    <a href="#" class="menu__link">КАТАЛОГ ПРОДУКЦИИ</a>
-                </li>
-                <li>
-                    <a href="#" class="menu__link">ПОДБОР ПРОГРАММЫ</a>
-                </li>
-            </ul>
-        </div>
+      <div class="header__logo">
+        <img src="./assets/images/logo-desktop.svg" alt="logo" />
+      </div>
+      <div class="header__menu">
+        <ul class="menu">
+          <li>
+            <a href="#" class="menu__link">ГЛАВНАЯ</a>
+          </li>
+          <li>
+            <a href="#" class="menu__link">КАТАЛОГ ПРОДУКЦИИ</a>
+          </li>
+          <li>
+            <a href="#" class="menu__link">ПОДБОР ПРОГРАММЫ</a>
+          </li>
+        </ul>
+      </div>
     </header>
 
     <main class="main">
+      <!-- начало секции Функциональное питание для котов -->
+      <section class="banner">
+        <div class="banner__content">
+          <h1 class="banner__title">
+            ФУНКЦИОНАЛЬНОЕ<br />
+            ПИТАНИЕ ДЛЯ КОТОВ
+          </h1>
+          <p class="banner__text">ЗАНЯЛСЯ СОБОЙ? ЗАЙМИСЬ КОТОМ!</p>
+          <button class="button">
+            <p class="button__text">ПОДОБРАТЬ ПРОГРАММУ</p>
+          </button>
+        </div>
+        <div class="banner__container">
+          <img
+            src="./assets/images/orange-can.png"
+            alt="банка с кормом"
+            class="banner__image"
+          />
+        </div>
+      </section>
+      <!-- конец секции Функциональное питание для котов -->
 
-        <!-- начало секции Функциональное питание для котов -->
-        <section class="banner">
-            <div class="banner__content">
-                <h1 class="banner__title">ФУНКЦИОНАЛЬНОЕ<br> ПИТАНИЕ ДЛЯ КОТОВ</h1>
-                <p class="banner__text">ЗАНЯЛСЯ СОБОЙ? ЗАЙМИСЬ КОТОМ!</p>
-                <button class="button"><p class="button__text">ПОДОБРАТЬ ПРОГРАММУ</p></button>
+      <!-- начало секции Похудение и набор веса -->
+      <section class="weight">
+        <div class="wrap weight__wrap">
+          <div class="weight__item">
+            <div class="weight__item-head">
+              <div class="weight__image">
+                <img
+                  src="./assets/images/cat-slim.svg"
+                  alt=""
+                  class="cat-slim"
+                />
+                <img
+                  src="./assets/images/circle.svg"
+                  alt="Зеленый круг"
+                  class="circle"
+                />
+              </div>
+              <span class="weight__title">похудение</span>
             </div>
-            <div class="banner__container">
-            <img src="/assets/images/orange-can.png" alt="банка с кормом" class="banner__image">
+            <p class="weight__text">
+              Ваш кот весит больше собаки и почти утратил способность лазить по
+              деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу
+              сбросить лишний вес.
+            </p>
+            <a class="weight__link">
+              <span>каталог slim</span>
+              <img src="./assets/images/icon-arrow.svg" alt="Стрелка направо" />
+            </a>
+          </div>
+          <div class="weight__item">
+            <div class="weight__item-head">
+              <div class="weight__image">
+                <img src="./assets/images/cat-pro.svg" alt="" class="cat-pro" />
+                <img
+                  src="./assets/images/circle.svg"
+                  alt="Зеленый круг"
+                  class="circle"
+                />
+              </div>
+              <span class="weight__title">набор массы</span>
             </div>
-        </section>
-        <!-- конец секции Функциональное питание для котов -->
+            <p class="weight__text">
+              Заработать авторитет среди дворовых котов и даже собак? Серия Cat
+              Energy Pro поможет вашему коту нарастить необходимые мышцы!
+            </p>
+            <a class="weight__link">
+              <span>каталог pro</span>
+              <img src="./assets/images/icon-arrow.svg" alt="Стрелка направо" />
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- конец секции Похудение и набор веса -->
 
-        <!-- начало секции Похудение и набор веса -->
-        <section class="weight">
-
-        </section>
-        <!-- конец секции Похудение и набор веса -->
-
-        <!-- Начало секции Как это работает -->
-        <section class="functionality">
-
-        </section>
-        <!-- конец секции Как это работает -->
-
-        <!-- Начало секции Живой пример -->
-        <section class="example">
-
-            <div class="example_wrapper">
-                <h2 class="example__heading">Живой пример</h2>
-                <div class="example__desc">
-                <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой 
-                    обычный корм на Cat Energy Slim. Отличный результат 
-                    без изнуряющих тренировок! При этом он не менял своих 
-                    привычек и по-прежнему спит по 16 часов в день. 
-                </p>
+      <!-- Начало секции Как это работает -->
+      <section class="functionality">
+        <div class="wrap functionality__wrap">
+          <p class="functionality__title">Как это работает</p>
+          <div class="functionality__content">
+            <div class="functionality__item">
+              <span class="functionality__digit">1</span>
+              <img
+                src="/group-project/assets/images/leaf.svg"
+                alt="Листок"
+                class="functionality__icon"
+              />
+              <p class="functionality__text">
+                Функциональное питание содержит только полезные питательные
+                вещества.
+              </p>
             </div>
-
-                <div class="example__price">
-                    <div class="example__weight">
-                        <h3>5 кг</h3>
-                        <p>снижение веса</p>
-                    </div>
-                    <div class="example__duration">
-                        <h3>60 дней</h3>
-                        <p>затрачено времени</p>
-                    </div>
-                    <h3 class="example__cost">затраты на питание:</h3>
-                    <h3 class="example__cost">15 000 руб.</h3>
-                    </div>
+            <div class="functionality__item">
+              <span class="functionality__digit">2</span>
+              <img
+                src="/group-project/assets/images/water.svg"
+                alt="Емкость с бурлящей водой"
+                class="functionality__icon"
+              />
+              <p class="functionality__text">
+                Выпускается в виде порошка, который нужно лишь залить кипятком и
+                готово.
+              </p>
             </div>
-
-            <!-- контейнер с кошкой -->
-            <div class="example__beforeafter">
-                <div class="img-comp-container">
-                    <div class="img-comp-img">
-                        <img src="./assets/images/before-cat.png"  height="300" width="400" alt="толстый кот">
-                    </div>
-                    <div class="img-comp-img img-comp-overlay">
-                        <img src="./assets/images/after-cat.png"  height="300" width="400" alt="худой кот">
-                    </div>
-                </div>
-                <input type="range" min="0" max="2" class="exemple__slider">
-                <div class="example__range">
-                    <p>было</p>
-                    <p>стало</p>
-                </div>
-                
-
+            <div class="functionality__item">
+              <span class="functionality__digit">3</span>
+              <img
+                src="/group-project/assets/images/cutlery.svg"
+                alt="Вилка и нож"
+                class="functionality__icon"
+              />
+              <p class="functionality__text">
+                Замените один-два приема обычной еды на наше функциональное
+                питание.
+              </p>
             </div>
-
-        </section>
-        <!-- Конец секции Живой пример -->
-        
-        <!-- Начало секции Карта -->
-        <section class="map">
-            <div class="map__wrapper">
-                <div class="map__invitation">
-                    <h2 class="map__invitation-heading">приглашаем 
-                        к сотрудничеству 
-                        дилеров!</h2>
-                        <div class="map__invitation-textwrapper">
-                            <p class="map__invitation-text">
-                            ул. Большая Конюшенная, д. 19/8
-                            </p>
-                            <p class="map__invitation-text">
-                            Санкт-Петербург
-                            </p>
-                        </div>
-                </div>
+            <div class="functionality__item">
+              <span class="functionality__digit">4</span>
+              <img
+                src="/group-project/assets/images/clock.svg"
+                alt="Часы"
+                class="functionality__icon"
+              />
+              <p class="functionality__text">
+                Уже через месяц наслаждайтесь изменениями к лучшему вашего
+                питомца!
+              </p>
             </div>
-            <div class="map__container">
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad3ee1ad01b4114d0637482a8ff4ed2bc47a91e2bd63f3bb04278198601d2e2ec&amp;source=constructor"  height="444"></iframe>
-            </div>
+          </div>
+        </div>
+      </section>
+      <!-- конец секции Как это работает -->
 
-        </section>
-        <!-- Конец секции Карта -->
+      <!-- Начало секции Живой пример -->
+      <section class="example">
+        <div class="example_wrapper">
+          <h2 class="example__heading">Живой пример</h2>
+          <div class="example__desc">
+            <p class="example__text">
+              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм
+              на Cat Energy Slim. Отличный результат без изнуряющих тренировок!
+              При этом он не менял своих привычек и по-прежнему спит по 16 часов
+              в день.
+            </p>
+          </div>
+
+          <div class="example__price">
+            <div class="example__weight">
+              <h3>5 кг</h3>
+              <p>снижение веса</p>
+            </div>
+            <div class="example__duration">
+              <h3>60 дней</h3>
+              <p>затрачено времени</p>
+            </div>
+            <h3 class="example__cost">затраты на питание:</h3>
+            <h3 class="example__cost">15 000 руб.</h3>
+          </div>
+        </div>
+
+        <!-- контейнер с кошкой -->
+        <div class="example__beforeafter">
+          <div class="img-comp-container">
+            <div class="img-comp-img">
+              <img
+                src="./assets/images/before-cat.png"
+                height="300"
+                width="400"
+                alt="толстый кот"
+              />
+            </div>
+            <div class="img-comp-img img-comp-overlay">
+              <img
+                src="./assets/images/after-cat.png"
+                height="300"
+                width="400"
+                alt="худой кот"
+              />
+            </div>
+          </div>
+          <input type="range" min="0" max="2" class="exemple__slider" />
+          <div class="example__range">
+            <p>было</p>
+            <p>стало</p>
+          </div>
+        </div>
+      </section>
+      <!-- Конец секции Живой пример -->
+
+      <!-- Начало секции Карта -->
+      <section class="map">
+        <div class="map__wrapper">
+          <div class="map__invitation">
+            <h2 class="map__invitation-heading">
+              приглашаем к сотрудничеству дилеров!
+            </h2>
+            <div class="map__invitation-textwrapper">
+              <p class="map__invitation-text">
+                ул. Большая Конюшенная, д. 19/8
+              </p>
+              <p class="map__invitation-text">Санкт-Петербург</p>
+            </div>
+          </div>
+        </div>
+        <div class="map__container">
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad3ee1ad01b4114d0637482a8ff4ed2bc47a91e2bd63f3bb04278198601d2e2ec&amp;source=constructor"
+            height="444"
+          ></iframe>
+        </div>
+      </section>
+      <!-- Конец секции Карта -->
     </main>
 
     <footer class="footer">
-        <div class="footer__content">
-            <img src="/assets/images/footer-logo2.svg" alt="логотип" class="footer__logo-cat">
-            <div class="footer__sm">
-                <a href="#">
-                    <img src="/assets/images/icon_vk.png" alt="вконтакте">
-                </a>
-                <a href="#">
-                    <img src="/assets/images/icon_instagram.png" alt="инстаграм">
-                </a>
-                <a href="#">
-                    <img src="/assets/images/icon_facebook.png" alt="фейсбук">
-                </a>
-            </div>
-            <img src="/assets/images/logo_html.svg" alt="логотип" class="footer__logo-academ">
+      <div class="footer__content">
+        <img
+          src="./assets/images/footer-logo2.svg"
+          alt="логотип"
+          class="footer__logo-cat"
+        />
+        <div class="footer__sm">
+          <a href="#">
+            <img src="./assets/images/icon_vk.png" alt="вконтакте" />
+          </a>
+          <a href="#">
+            <img src="./assets/images/icon_instagram.png" alt="инстаграм" />
+          </a>
+          <a href="#">
+            <img src="./assets/images/icon_facebook.png" alt="фейсбук" />
+          </a>
         </div>
+        <img
+          src="./assets/images/logo_html.svg"
+          alt="логотип"
+          class="footer__logo-academ"
+        />
+      </div>
     </footer>
-<!-- Скрипт для кошек -->
+    <!-- Скрипт для кошек -->
     <script>
-        initComparisons();
+      initComparisons();
     </script>
-<!-- Скрипт для кошек -->
-</body>
+    <!-- Скрипт для кошек -->
+  </body>
 </html>
