@@ -326,12 +326,12 @@ body {
 
 /* Секция EXAMPLE начало */
 
-.example {
-  /* max-width: 1220px; */
-  /* margin-left: 110px;
-    margin-right: 110px; */
-  display: flex;
-  justify-content: space-between;
+
+.example{
+    max-width: 1220px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
 }
 .example_wrapper {
   max-width: 1220px;
@@ -344,8 +344,9 @@ body {
   padding-bottom: 126px;
   padding-top: 60px;
 }
-.example__beforeafter {
-  /* margin-right: 300px; */
+.example__beforeafter{
+    margin-right: 110px;
+    margin-left: 110px;
 }
 .example__text {
   padding-bottom: 69px;
@@ -425,12 +426,13 @@ iframe {
   max-height: 400px;
 }
 
-.exemple__slider {
-  border-radius: 6px;
-  width: 400px;
-  height: 6px;
-  background: #dcdcdc;
-  cursor: pointer;
+.example__slider{
+    border-radius: 6px;
+    width: 400px;
+    height: 6px;
+    background: #dcdcdc;
+    cursor: pointer;
+
 }
 .example__range {
   display: flex;
@@ -439,10 +441,19 @@ iframe {
 .example__range p {
   font-size: 20px;
 }
+.slider_wrapper{
+    max-width: 300px;
+}
+.example__range p:last-child{
+    margin-left: 320px;
+}
 /* Секция EXAMPLE конец */
 
 /* Секция MAP начало */
-
+.map{
+  max-width: 1220px;
+  margin: 0 auto;
+}
 .map__wrapper {
   position: absolute;
   margin-top: 100px;
@@ -476,7 +487,6 @@ iframe {
 
 .map__container {
   width: 100%;
-  height: 100vh;
   display: flex;
   justify-content: center;
 }
@@ -513,6 +523,26 @@ iframe {
 /* FOOTER конец */
 
 /* Медиа запросы */
+/* Медиа запрос меньше 950px */
+/* блок с адресом встает над картой и кот в exemple встает под текстом */
+@media screen and (max-width: 950px){
+    .map {
+        display: flex;
+        flex-direction: column;
+    }
+    .map__wrapper{
+        position: relative;
+        margin-top: 10px;
+        margin-left: 110px;
+        padding: 66px 0px 66px 0px;
+        max-width: 100vw;
+    }
+    .example{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
 /* Первый медиа запрос -планшет */
 @media (max-width: 768px) {
 }
