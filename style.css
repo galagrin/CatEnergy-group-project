@@ -420,7 +420,10 @@ iframe {
 /* Секция EXAMPLE конец */
 
 /* Секция MAP начало */
-
+.map{
+  max-width: 1220px;
+  margin: 0 auto;
+}
 .map__wrapper {
   position: absolute;
   margin-top: 100px;
@@ -454,7 +457,6 @@ iframe {
 
 .map__container {
   width: 100%;
-  height: 100vh;
   display: flex;
   justify-content: center;
 }
