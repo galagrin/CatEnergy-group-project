@@ -41,37 +41,39 @@ body {
 }
 
 .header{
+    /* position: fixed; */
     justify-content: space-between;
-    padding-left: 110px;
-    padding-top: 50px;
-    padding-top: 3.3%; 
-    margin-bottom: 32px;
+    padding-left: 7%;
+    padding-top: 3.3%;
     width: 100%;
-    height: 17vh;
+    height: 30%;
 }
 
 .header__logo{
     align-items: flex-end;
     padding-top: 1.5%;
-    /* width: 202px; */
-    height: 59px;
     width: 20%;
     height: 100%;
 }
 
-.menu{
+.header__menu{ 
     align-items: flex-end;
     flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    width: 50%;
+}
+
+.menu{ 
     list-style-type: none;
     justify-content: space-evenly;
     flex-wrap: nowrap;
-    width: 41vw;
+    width: 100%;
 }
 
 .menu__link{
     text-decoration: none;
     color: white;
-    /* font-size: 20px; */
     font-size: 1.2rem;
 }
 
@@ -89,8 +91,8 @@ body {
     align-items: flex-start;
     justify-content: space-around;
     width: 100%;
-    /* height: 80vh; */
-    max-height: 700px;
+    height: 70%;
+    /* max-height: 696px; если оставить, то при увеличении экрана элементы банера вылезают на другие блоки */
 }
 
 .banner__content{
@@ -99,11 +101,11 @@ body {
     text-align: left;
     font-size: smaller;
     line-height: 1;
-    padding-left: 9%;
+    padding-left: 10%;
     padding-top: 5%;
     margin-right: 0%;
-    max-width: 45%;
-    max-height: 80%;
+    width: 37%;
+    height: 60%;
 }
 
 .banner__title{
@@ -112,14 +114,16 @@ body {
     font-size: 40px;
     line-height: 1.4;
     color: #000;
+    max-width: 100%;
 }
 
 .banner__text{
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.5rem;
     line-height: 100%;
     text-transform: uppercase;
     color: #000;
+    max-width: 100%;
 }
 
 .button{
@@ -127,17 +131,17 @@ body {
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-between;
-    width: 220px;
-    height: 54px;
+    width: 50%;
+    height: 15%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-top: 13%;
     background-color: #68b738;
-    margin-top: 50px;
 }
 
 .button__text{ 
     margin: 0%;
-    padding-top: 14px;
     font-weight: 400;
-    /* font-size: 20px; */
     font-size: 1.2rem;
     width: 100%;
     height: 100%;
@@ -145,12 +149,17 @@ body {
     color: #fff;
 }
 
-.banner__image{
+.banner__container{
+    width: 60%;
+    padding-right: 23%;
     padding-top: 2%;
-    /* padding-bottom: 5%; */
-    padding-right: 20%;
+}
+
+.banner__image{
+    padding-left: 0%;
     margin-left: 0%;
-    max-height: 100%;
+    width: 100%;
+    max-width: 100%;
 }
 
 .header,
@@ -158,8 +167,10 @@ body {
     background-image: url(./assets/images/background-desktop.png);
     background-repeat: no-repeat;
     background-position: right;
-    background-size: auto;
+    background-size: 50%;
     background-attachment: fixed;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 /* Секция BANNER конец */
@@ -176,9 +187,8 @@ body {
 
 
 .example{
-    /* max-width: 1220px; */
-    /* margin-left: 110px;
-    margin-right: 110px; */
+    max-width: 1220px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
@@ -195,7 +205,8 @@ body {
 
 }
 .example__beforeafter{
-    /* margin-right: 300px; */
+    margin-right: 110px;
+    margin-left: 110px;
 }
 .example__text{
     padding-bottom: 69px;
@@ -276,7 +287,7 @@ iframe{
     max-height: 400px;
 }
 
-.exemple__slider{
+.example__slider{
     border-radius: 6px;
     width: 400px;
     height: 6px;
@@ -290,6 +301,12 @@ iframe{
 }
 .example__range p{
     font-size: 20px;
+}
+.slider_wrapper{
+    max-width: 300px;
+}
+.example__range p:last-child{
+    margin-left: 320px;
 }
 /* Секция EXAMPLE конец */
 
@@ -338,11 +355,55 @@ iframe{
 /* Секция MAP конец */
 
 /* FOOTER начало */
+.footer,
+.footer__content,
+.footer__sm{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
+.footer{
+    height: 17vh;
+    justify-content: center;
+    background-color: #F2F2F2;
+}
+
+.footer__content{
+    width: 90%;
+    height: 70%;
+    justify-content: space-between;
+}
+
+.footer__sm{
+    width: 10%;
+    height: 90%;
+    justify-content: space-between;
+}
 /* FOOTER конец */
 
 
 /* Медиа запросы */
+/* Медиа запрос меньше 950px */
+/* блок с адресом встает над картой и кот в exemple встает под текстом */
+@media screen and (max-width: 950px){
+    .map {
+        display: flex;
+        flex-direction: column;
+    }
+    .map__wrapper{
+        position: relative;
+        margin-top: 10px;
+        margin-left: 110px;
+        padding: 66px 0px 66px 0px;
+        max-width: 100vw;
+    }
+    .example{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
 /* Первый медиа запрос -планшет */
 @media (max-width: 768px) {
 
