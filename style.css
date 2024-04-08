@@ -51,7 +51,7 @@ body {
 .footer{
     max-width: 1440px;
     margin: 0 auto;
-    /* padding: 0 110px */
+    /* padding: 0 110px; */
 }
 
 .header {
@@ -133,12 +133,12 @@ body {
   align-items: flex-start;
   justify-content: space-around;
   width: 100%;
-  height: 70%;
-  /* max-height: 696px; если оставить, то при увеличении экрана элементы банера вылезают на другие блоки */
+  height: 100%;
+  max-width: 100%;
 }
 
 .banner__content {
-  /* border: #000 1px solid; */
+  /* border: #8007f0 1px solid; */
   flex-direction: column;
   text-align: left;
   font-size: smaller;
@@ -146,18 +146,19 @@ body {
   padding-left: 9%;
   padding-top: 7%;
   margin-right: 0%;
-  width: 37%;
+  width: 40%;
   height: 100%;
+  max-width: 100%;
 }
 
 .banner__title {
-  /* border: #000 1px solid; */
+  /* border: #a01a1a 1px solid; */
   font-style: normal;
   font-family: "Oswald";
   font-size: 60px;
-  text-transform: uppercase;
-  line-height: 1.4;
+  line-height: 1;
   color: #000;
+  max-width: 100%;
 }
 
 .banner__text {
@@ -176,7 +177,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 50%;
-  height: 15%;
+  height: 10%;
   padding-top: 2%;
   padding-bottom: 2%;
   margin-top: 13%;
@@ -198,13 +199,12 @@ body {
 .banner__container {
   /* border: #c42626 1px solid; */
   width: 60%;
-  padding-right: 15%;
+  padding-right: 23%;
   padding-top: 2%;
 }
 
 .banner__image {
   /* border: #07f02e 1px solid; */
-  padding-right: 13%;
   width: 100%;
   max-width: 100%;
 }
@@ -224,7 +224,7 @@ body {
   background-image: url(./assets/images/background-desktop.png);
   background-repeat: no-repeat;
   background-position: right;
-  background-size: 50%;
+  background-size: 49%;
   /* background-attachment: fixed; */
   min-width: 100%;
   min-height: 100%;
