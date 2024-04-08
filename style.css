@@ -314,6 +314,10 @@ body {
   padding-bottom: 126px;
   padding-top: 60px;
 }
+.example__heading{
+  font-size: 60px;
+  line-height: 100%;
+}
 .example__beforeafter{
     margin-right: 110px;
     margin-left: 110px;
