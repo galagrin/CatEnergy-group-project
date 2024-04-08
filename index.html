@@ -70,51 +70,55 @@
   </head>
 
   <body>
-    <header class="header">
+    <div class="test">
+      <header class="header">
         <div class="header__content">
-            <div class="header__logo">
-                <img src="./assets/images/logo-desktop.svg" alt="logo"/>
-            </div>
-            <div class="header__menu">
-                <ul class="menu">
-                    <li>
-                        <a href="#" class="menu__link">ГЛАВНАЯ</a>
-                    </li>
-                    <li>
-                        <a href="#" class="menu__link">КАТАЛОГ ПРОДУКЦИИ</a>
-                    </li>
-                    <li>
-                        <a href="#" class="menu__link">ПОДБОР ПРОГРАММЫ</a>
-                    </li>
-                </ul>
-            </div>
+          <div class="header__logo">
+            <img src="./assets/images/logo-desktop.svg" alt="logo" />
+          </div>
+          <div class="header__menu">
+            <ul class="menu">
+              <li>
+                <a href="#" class="menu__link">ГЛАВНАЯ</a>
+              </li>
+              <li>
+                <a href="#" class="menu__link">КАТАЛОГ ПРОДУКЦИИ</a>
+              </li>
+              <li>
+                <a href="#" class="menu__link">ПОДБОР ПРОГРАММЫ</a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </header>
+      </header>
+
+      <section class="banner">
+        <div class="banner__box">
+          <div class="banner__content">
+            <h1 class="banner__title">
+              ФУНКЦИОНАЛЬНОЕ<br />
+              ПИТАНИЕ ДЛЯ КОТОВ
+            </h1>
+            <p class="banner__text">ЗАНЯЛСЯ СОБОЙ? ЗАЙМИСЬ КОТОМ!</p>
+            <button class="button">
+              <p class="button__text">ПОДОБРАТЬ ПРОГРАММУ</p>
+            </button>
+          </div>
+          <div class="banner__container">
+            <img
+              src="./assets/images/orange-can.png"
+              alt="банка с кормом"
+              class="banner__image"
+            />
+          </div>
+        </div>
+      </section>
+    </div>
 
     <main class="main">
-        <!-- начало секции Функциональное питание для котов -->
-        <section class="banner">
-            <div class="banner__box">
-                <div class="banner__content">
-                    <h1 class="banner__title">
-                    ФУНКЦИОНАЛЬНОЕ<br />
-                    ПИТАНИЕ ДЛЯ КОТОВ
-                    </h1>
-                    <p class="banner__text">ЗАНЯЛСЯ СОБОЙ? ЗАЙМИСЬ КОТОМ!</p>
-                    <button class="button">
-                    <p class="button__text">ПОДОБРАТЬ ПРОГРАММУ</p>
-                    </button>
-                </div>
-                <div class="banner__container">
-                    <img
-                        src="./assets/images/orange-can.png"
-                        alt="банка с кормом"
-                        class="banner__image"
-                    />
-                </div>
-            </div>
-        </section>
-        <!-- конец секции Функциональное питание для котов -->
+      <!-- начало секции Функциональное питание для котов -->
+
+      <!-- конец секции Функциональное питание для котов -->
 
       <!-- начало секции Похудение и набор веса -->
       <section class="weight">
@@ -255,50 +259,58 @@
           </div>
         </div>
 
-            <!-- контейнер с кошкой -->
-            <div class="example__beforeafter">
-                <div class="img-comp-container">
-                    <div class="img-comp-img">
-                        <img src="./assets/images/before-cat.png"  height="300" width="400" alt="толстый кот">
-                    </div>
-                    <div class="img-comp-img img-comp-overlay">
-                        <img src="./assets/images/after-cat.png"  height="300" width="400" alt="худой кот">
-                    </div>
-                </div>
-                <input type="range" min="0" max="2" class="exemple__slider">
-                <div class="example__range">
-                    <p>было</p>
-                    <p>стало</p>
-                </div>
-                
+        <!-- контейнер с кошкой -->
+        <div class="example__beforeafter">
+          <div class="img-comp-container">
+            <div class="img-comp-img">
+              <img
+                src="./assets/images/before-cat.png"
+                height="300"
+                width="400"
+                alt="толстый кот"
+              />
+            </div>
+            <div class="img-comp-img img-comp-overlay">
+              <img
+                src="./assets/images/after-cat.png"
+                height="300"
+                width="400"
+                alt="худой кот"
+              />
+            </div>
+          </div>
+          <input type="range" min="0" max="2" class="exemple__slider" />
+          <div class="example__range">
+            <p>было</p>
+            <p>стало</p>
+          </div>
+        </div>
+      </section>
+      <!-- Конец секции Живой пример -->
 
+      <!-- Начало секции Карта -->
+      <section class="map">
+        <div class="map__wrapper">
+          <div class="map__invitation">
+            <h2 class="map__invitation-heading">
+              приглашаем к сотрудничеству дилеров!
+            </h2>
+            <div class="map__invitation-textwrapper">
+              <p class="map__invitation-text">
+                ул. Большая Конюшенная, д. 19/8
+              </p>
+              <p class="map__invitation-text">Санкт-Петербург</p>
             </div>
-
-        </section>
-        <!-- Конец секции Живой пример -->
-        
-        <!-- Начало секции Карта -->
-        <section class="map">
-            <div class="map__wrapper">
-                <div class="map__invitation">
-                    <h2 class="map__invitation-heading">приглашаем 
-                        к сотрудничеству 
-                        дилеров!</h2>
-                        <div class="map__invitation-textwrapper">
-                            <p class="map__invitation-text">
-                            ул. Большая Конюшенная, д. 19/8
-                            </p>
-                            <p class="map__invitation-text">
-                            Санкт-Петербург
-                            </p>
-                        </div>
-                </div>
-            </div>
-            <div class="map__container">
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad3ee1ad01b4114d0637482a8ff4ed2bc47a91e2bd63f3bb04278198601d2e2ec&amp;source=constructor"  height="444"></iframe>
-            </div>
-        </section>
-        <!-- Конец секции Карта -->
+          </div>
+        </div>
+        <div class="map__container">
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad3ee1ad01b4114d0637482a8ff4ed2bc47a91e2bd63f3bb04278198601d2e2ec&amp;source=constructor"
+            height="444"
+          ></iframe>
+        </div>
+      </section>
+      <!-- Конец секции Карта -->
     </main>
 
     <footer class="footer">
