@@ -49,8 +49,9 @@ body {
 .banner__box,
 .banner__container,
 .footer{
-    max-width: 1220px;
+    max-width: 1440px;
     margin: 0 auto;
+    /* padding: 0 110px */
 }
 
 .header { 
@@ -154,7 +155,8 @@ body {
     /* border: #000 1px solid; */
   font-style: normal;
   font-family: "Oswald";
-  font-size: 40px;
+  font-size: 60px;
+  text-transform: uppercase;
   line-height: 1.4;
   color: #000;
 }
@@ -218,6 +220,10 @@ body {
   background-attachment: fixed;
   min-width: 100%;
   min-height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  /* padding: 0 110px; */
+
 }
 
 /* Секция BANNER конец */
