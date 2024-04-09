@@ -56,6 +56,8 @@ body {
 .header { 
     flex-direction: row;
     align-items: center;
+    max-width: 1220px;
+    margin: 0 auto;
     width: 100%;
     height: 30%;
 } 
@@ -103,6 +105,7 @@ body {
 .menu__link {
     text-decoration: none;
     color: whitesmoke;
+    font-size: 20px;
     font-size: 1.2rem;
     /* border: #3c10ea 1px solid;; */
 }
@@ -117,6 +120,8 @@ body {
 
 .banner{
     height: 35vw;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .banner__box,
@@ -215,7 +220,7 @@ body {
   background-repeat: no-repeat;
   background-position: right;
   background-size: 50%;
-  background-attachment: fixed;
+  background-attachment: fixed; */
   min-width: 100%;
   min-height: 100%;
 }
@@ -328,7 +333,7 @@ body {
 
 
 .example{
-    max-width: 1220px;
+    max-width: 1440px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -345,6 +350,7 @@ body {
   padding-top: 60px;
 }
 .example__heading{
+  width: 500px;
   font-size: 60px;
   line-height: 100%;
 }
@@ -455,7 +461,7 @@ iframe {
 
 /* Секция MAP начало */
 .map{
-  max-width: 1220px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 .map__wrapper {
