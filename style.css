@@ -407,6 +407,7 @@ body {
   line-height: 100%;
   color: #444;
 }
+
 .example__cost {
   text-align: center;
   padding-bottom: 75px;
@@ -446,16 +447,17 @@ iframe {
   max-height: 400px;
 }
 
-.example__slider {
+/* .example__slider {
   border-radius: 6px;
-  width: 400px;
+  max-width: 350px;
   height: 6px;
   background: #dcdcdc;
   cursor: pointer;
-}
+} */
 .example__range {
   display: flex;
   justify-content: space-between;
+  max-width: 400px;
 }
 .example__range p {
   font-size: 20px;
@@ -544,6 +546,11 @@ iframe {
 /* Медиа запросы */
 /* Медиа запрос меньше 950px */
 /* блок с адресом встает над картой и кот в exemple встает под текстом */
+@media screen and (max-width: 1100px) {
+.example__beforeafter {
+  margin-left: 50px;
+}
+}
 @media screen and (max-width: 950px) {
   .map {
     display: flex;
@@ -556,14 +563,52 @@ iframe {
     padding: 66px 0px 66px 0px;
     max-width: 100vw;
   }
+  .map__invitation{
+    display: flex;
+    justify-content: space-between;
+  }
   .example {
     display: flex;
     flex-direction: column;
   }
+
+  .img-comp-container,
+  .example__range {
+    padding-left: 110px;
+  }
+  .map__wrapper {
+  margin-left: 72px;
 }
+.map__invitation-text:last-child{
+  display: flex;
+  justify-content: end;
+}
+
+.example_wrapper {
+  padding-left: 30px;
+}
+.example__text {
+  padding-bottom: 54px;
+  max-width: 708px;
+}
+.example__price {
+  display: flex
+}
+.example__weight,
+.example__duration {
+  width: 162px;
+}
+.example__cost{
+  padding-top: 25px;
+}
+}
+
 /* Первый медиа запрос -планшет */
 @media (max-width: 768px) {
+  
 }
+
+
 /* Второй медиа запрпос - мобильный*/
 @media (max-width: 320px) {
 }
