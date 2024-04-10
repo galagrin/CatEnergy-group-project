@@ -554,6 +554,7 @@ iframe {
 }
 }
 @media screen and (max-width: 950px) {
+  /* изменения в секцию карты */
   .map {
     display: flex;
     flex-direction: column;
@@ -569,29 +570,13 @@ iframe {
     display: flex;
     justify-content: space-between;
   }
+  /* изменения в секцию Живой пример */
   .example {
     display: flex;
     flex-direction: column;
   }
 
-  .banner__title{
-    font-size: 30px;
-}
-  .banner__text{
-    font-size: 15px;
-  }
-
-  .button__text {
-    font-size: 8px;
-  }
-}
-
-/* Медиа запрос для логотипа */
-@media screen and (min-width: 769px) {
-    .logo-tablet{
-        display: none;
-    }
-    .img-comp-container,
+  .img-comp-container,
     .example__range {
       padding-left: 110px;
     }
@@ -619,6 +604,26 @@ iframe {
     .example__cost{
       padding-top: 25px;
     }
+    /* конец изменения в секцию Живой пример */
+
+    .banner__title{
+      font-size: 30px;
+    }
+    .banner__text{
+      font-size: 15px;
+    }
+
+    .button__text {
+      font-size: 8px;
+    } 
+}
+
+/* Медиа запрос для логотипа */
+@media screen and (min-width: 769px) {
+    .logo-tablet{
+        display: none;
+    }
+  
     }
 
 /* Первый медиа запрос -планшет */
@@ -674,8 +679,6 @@ iframe {
     /* Хедер конец */
 
 
-  
-}
 
 
 /* Второй медиа запрпос - мобильный*/
