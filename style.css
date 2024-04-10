@@ -59,6 +59,7 @@ body {
   align-items: center;
   width: 100%;
   height: 30%;
+  /* border: #000 1px solid; */
 }
 
 .header__content {
@@ -105,11 +106,12 @@ body {
   text-decoration: none;
   color: whitesmoke;
   font-size: 1.2rem;
-  /* border: #3c10ea 1px solid;; */
+  /* border: #3c10ea 1px solid; */
 }
 
 .menu__link:hover {
   text-decoration: underline;
+  text-underline-offset: 10px;
 }
 
 /* Хедер конец */
@@ -209,8 +211,8 @@ body {
   max-width: 100%;
 }
 
-.header,
-.banner {
+/* .header, */
+/* .banner{ */
   /* background-image: url(./assets/images/background-desktop.png);
   background-repeat: no-repeat;
   background-position: right;
@@ -218,7 +220,7 @@ body {
   background-attachment: fixed; 
   min-width: 100%;
   min-height: 100%; */
-}   
+/* }   */
 
 
 .test {
@@ -572,39 +574,106 @@ iframe {
     flex-direction: column;
   }
 
-  .img-comp-container,
-  .example__range {
-    padding-left: 110px;
-  }
-  .map__wrapper {
-  margin-left: 72px;
+  .banner__title{
+    font-size: 30px;
 }
-.map__invitation-text:last-child{
-  display: flex;
-  justify-content: end;
+  .banner__text{
+    font-size: 15px;
+  }
+
+  .button__text {
+    font-size: 8px;
+  }
 }
 
-.example_wrapper {
-  padding-left: 30px;
-}
-.example__text {
-  padding-bottom: 54px;
-  max-width: 708px;
-}
-.example__price {
-  display: flex
-}
-.example__weight,
-.example__duration {
-  width: 162px;
-}
-.example__cost{
-  padding-top: 25px;
-}
-}
+/* Медиа запрос для логотипа */
+@media screen and (min-width: 769px) {
+    .logo-tablet{
+        display: none;
+    }
+    .img-comp-container,
+    .example__range {
+      padding-left: 110px;
+    }
+    .map__wrapper {
+      margin-left: 72px;
+    }
+    .map__invitation-text:last-child{
+      display: flex;
+      justify-content: end;
+    }
+    .example_wrapper {
+      padding-left: 30px;
+    }
+    .example__text {
+      padding-bottom: 54px;
+      max-width: 708px;
+    }
+    .example__price {
+    display: flex
+    }
+    .example__weight,
+    .example__duration {
+      width: 162px;
+    }
+    .example__cost{
+      padding-top: 25px;
+    }
+    }
 
 /* Первый медиа запрос -планшет */
 @media (max-width: 768px) {
+    /*  Хедер начало */
+    .header {
+        height: 80px;
+    }
+
+    .header__content {
+        align-items: flex-end;
+        padding: 28px 30px 0 30px;
+    }
+
+    .header__logo {
+        width: 174px;
+        height: 52px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo-desktop{
+        display: none;
+    }
+
+    .logo-tablet{
+        max-width: 100%;
+    }
+
+    .header__menu {
+        width: 440px;
+        height: 36px;
+    }
+
+    .menu {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .menu__link {
+        color: black;
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .menu__link:hover {
+        text-decoration: underline;
+        text-decoration-color: #68b738;
+        text-underline-offset: 5px;
+    }
+  }
+      
+    /* Хедер конец */
+
+
   
 }
 
