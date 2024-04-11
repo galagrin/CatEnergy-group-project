@@ -409,7 +409,9 @@ body {
   line-height: 100%;
   color: #444;
 }
-
+.example__costswrap{
+  display: none;
+}
 .example__cost {
   text-align: center;
   padding-bottom: 75px;
@@ -601,9 +603,22 @@ iframe {
     .example__duration {
       width: 162px;
     }
-    .example__cost{
-      padding-top: 25px;
+    .example__costswrap{
+      display: grid;
+      text-align: end;
+      margin-left: 100px;
+      padding-top: 20px;
+      margin-right: 30px;
     }
+    .example__costs{
+      font-size: 20px;
+      line-height: 100%;
+      text-transform: uppercase;
+    }
+    .example__cost {
+      display: none;
+    }
+  
     /* конец изменения в секцию Живой пример */
 
     .banner__title{
