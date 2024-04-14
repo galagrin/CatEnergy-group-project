@@ -589,6 +589,12 @@ iframe {
     margin-left: 50px;
   }
 }
+
+@media screen and (max-width: 1070px) {
+  .example__beforeafter {
+    margin-left: 10px;
+  }
+  }
 @media screen and (max-width: 950px) {
   /* изменения в секцию карты */
   .map {
