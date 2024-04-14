@@ -71,49 +71,57 @@
 
   <body>
     <div class="test">
-        <header class="header">
-            <div class="header__content">
-                <div class="header__logo">
-                    <img src="./assets/images/logo-desktop.svg" alt="logo" class="logo-desktop"/>
-                    <img src="./assets/images/logo-tablet.svg" alt="logo" class="logo-tablet"/>
-                </div>
-                <div class="header__menu">
-                    <ul class="menu">
-                        <li>
-                            <a href="#" class="menu__link">ГЛАВНАЯ</a>
-                        </li>
-                        <li>
-                            <a href="#" class="menu__link">КАТАЛОГ ПРОДУКЦИИ</a>
-                        </li>
-                        <li>
-                            <a href="#" class="menu__link">ПОДБОР ПРОГРАММЫ</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </header>
+      <header class="header">
+        <div class="header__content">
+          <div class="header__logo">
+            <img
+              src="./assets/images/logo-desktop.svg"
+              alt="logo"
+              class="logo-desktop"
+            />
+            <img
+              src="./assets/images/logo-tablet.svg"
+              alt="logo"
+              class="logo-tablet"
+            />
+          </div>
+          <div class="header__menu">
+            <ul class="menu">
+              <li>
+                <a href="#" class="menu__link">ГЛАВНАЯ</a>
+              </li>
+              <li>
+                <a href="#" class="menu__link">КАТАЛОГ ПРОДУКЦИИ</a>
+              </li>
+              <li>
+                <a href="#" class="menu__link">ПОДБОР ПРОГРАММЫ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
 
-        <section class="banner">
-            <div class="banner__box">
-                <div class="banner__content">
-                    <h1 class="banner__title">
-                        Функциональное<br />
-                        питание для котов
-                    </h1>
-                    <p class="banner__text">ЗАНЯЛСЯ СОБОЙ? ЗАЙМИСЬ КОТОМ!</p>
-                    <button class="button">
-                        <p class="button__text">ПОДОБРАТЬ ПРОГРАММУ</p>
-                    </button>
-                </div>
-                <div class="banner__container">
-                    <img
-                    src="./assets/images/orange-can.png"
-                    alt="банка с кормом"
-                    class="banner__image"
-                    />
-                </div>
-            </div>
-        </section>
+      <section class="banner">
+        <div class="banner__box">
+          <div class="banner__content">
+            <h1 class="banner__title">
+              Функциональное<br />
+              питание для котов
+            </h1>
+            <p class="banner__text">ЗАНЯЛСЯ СОБОЙ? ЗАЙМИСЬ КОТОМ!</p>
+            <button class="button">
+              <p class="button__text">ПОДОБРАТЬ ПРОГРАММУ</p>
+            </button>
+          </div>
+          <div class="banner__container">
+            <img
+              src="./assets/images/orange-can.png"
+              alt="банка с кормом"
+              class="banner__image"
+            />
+          </div>
+        </div>
+      </section>
     </div>
 
     <main class="main">
@@ -125,21 +133,21 @@
       <section class="weight">
         <div class="wrap weight__wrap">
           <div class="weight__item">
-            <div class="weight__item-head">
-              <div class="weight__image">
-                <img
-                  src="./assets/images/cat-slim.svg"
-                  alt=""
-                  class="cat-slim"
-                />
-                <img
-                  src="./assets/images/circle.svg"
-                  alt="Зеленый круг"
-                  class="circle"
-                />
-              </div>
-              <span class="weight__title">похудение</span>
+            <!-- <div class="weight__item-head"> -->
+            <div class="weight__image">
+              <img
+                src="./assets/images/cat-slim.svg"
+                alt="Силуэт кошки в профиль"
+                class="cat-slim"
+              />
+              <img
+                src="./assets/images/circle.svg"
+                alt="Зеленый круг"
+                class="circle"
+              />
             </div>
+            <!-- </div> -->
+            <span class="weight__title weight-loss">похудение</span>
             <p class="weight__text">
               Ваш кот весит больше собаки и почти утратил способность лазить по
               деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу
@@ -151,17 +159,21 @@
             </a>
           </div>
           <div class="weight__item">
-            <div class="weight__item-head">
-              <div class="weight__image">
-                <img src="./assets/images/cat-pro.svg" alt="" class="cat-pro" />
-                <img
-                  src="./assets/images/circle.svg"
-                  alt="Зеленый круг"
-                  class="circle"
-                />
-              </div>
-              <span class="weight__title">набор массы</span>
+            <!-- <div class="weight__item-head"> -->
+            <div class="weight__image">
+              <img
+                src="./assets/images/cat-pro.svg"
+                alt="Силуэт пантеры в профиль"
+                class="cat-pro"
+              />
+              <img
+                src="./assets/images/circle.svg"
+                alt="Зеленый круг"
+                class="circle"
+              />
             </div>
+            <!-- </div> -->
+            <span class="weight__title weight-gain">набор массы</span>
             <p class="weight__text">
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat
               Energy Pro поможет вашему коту нарастить необходимые мышцы!
@@ -180,7 +192,7 @@
         <div class="wrap functionality__wrap">
           <p class="functionality__title">Как это работает</p>
           <div class="functionality__content">
-            <div class="functionality__item">
+            <div class="functionality__item func-one">
               <span class="functionality__digit">1</span>
               <img
                 src="./assets/images/leaf.svg"
@@ -192,7 +204,7 @@
                 вещества.
               </p>
             </div>
-            <div class="functionality__item">
+            <div class="functionality__item func-two">
               <span class="functionality__digit">2</span>
               <img
                 src="./assets/images/water.svg"
@@ -204,7 +216,7 @@
                 готово.
               </p>
             </div>
-            <div class="functionality__item">
+            <div class="functionality__item func-three">
               <span class="functionality__digit">3</span>
               <img
                 src="./assets/images/cutlery.svg"
@@ -216,7 +228,7 @@
                 питание.
               </p>
             </div>
-            <div class="functionality__item">
+            <div class="functionality__item func-four">
               <span class="functionality__digit">4</span>
               <img
                 src="./assets/images/clock.svg"
@@ -255,16 +267,13 @@
               <h3>60 дней</h3>
               <p>затрачено времени</p>
             </div>
-              <h3 class="example__cost">затраты на питание:</h3>
-              <h3 class="example__cost">15 000 руб.</h3>
-              
+            <h3 class="example__cost">затраты на питание:</h3>
+            <h3 class="example__cost">15 000 руб.</h3>
+
             <div class="example__costswrap">
               <h3 class="example__costs">затраты на питание:</h3>
               <h3 class="example__costs">15 000 руб.</h3>
             </div>
-
-            
-
           </div>
         </div>
 
